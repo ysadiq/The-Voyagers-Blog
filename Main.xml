@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data'
+xmlns:og='http://ogp.me/ns#' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
     <b:include data='blog' name='all-head-content'/>
 
@@ -1096,10 +1097,13 @@ $.fn.imgCentering=function(options){return this.each(function(e){var img=$(this)
 
 /*]]>*/</script>
 
+<meta property="fb:app_id" content="928992220481085"/>
 
 </head>
 <!--<body>-->
 <body>
+
+<div id="fb-root"></div><script>window.fbAsyncInit = function() {FB.init({appId : 928992220481085,status : true, // check login statuscookie : true, // enable cookies to allow the server to access the sessionxfbml : true // parse XFBML});};(function() {var e = document.createElement(‘script’);e.src = document.location.protocol + ‘//connect.facebook.net/en_US/all.js';e.async = true;document.getElementById(‘fb-root’).appendChild(e);}());</script>
 
 <b:section class='navigation' id='navigation' maxwidgets='1' showaddelement='no'>
   <b:widget id='HTML77' locked='true' title='Navigation-Menus (Do Not Edit Here!)' type='HTML'>
@@ -1329,28 +1333,16 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/&quot;+cat1+&q
   </p>
 </b:includable>
                         <b:includable id='comment-form' var='post'>
-  <div class='comment-form'>
-    <a name='comment-form'/>
-    <b:if cond='data:mobile'>
-      <h4 id='comment-post-message'>
-        <a expr:id='data:widget.instanceId + &quot;_comment-editor-toggle-link&quot;' href='javascript:void(0)'><data:postCommentMsg/></a></h4>
-      <p><data:blogCommentMessage/></p>
-      <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
-    <b:else/>
-      <h4 id='comment-post-message'><data:postCommentMsg/></h4>
-      <p><data:blogCommentMessage/></p>
-      <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
-    </b:if>
-    <data:post.friendConnectJs/>
-    <data:post.cmtfpIframe/>
-    <script type='text/javascript'>
-      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
-    </script>
-  </div>
+
+
+
+  <b:if cond='data:blog.pageType == "item"'><div style='padding:20px 0px 5px 0px; margin:0px 0px 0px 0px;'><script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/><div> <fb:comments
+            colorscheme='light'
+            expr:href='data:post.url'
+            expr:title='data:post.title'
+            expr:xid='data:post.id'
+            width='550'
+            /></div></div></b:if>
 </b:includable>
                         <b:includable id='commentDeleteIcon' var='comment'>
   <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
