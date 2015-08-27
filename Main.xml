@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data'
-xmlns:og='http://ogp.me/ns#' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
   <head>
     <b:include data='blog' name='all-head-content'/>
 
@@ -1097,13 +1096,13 @@ $.fn.imgCentering=function(options){return this.each(function(e){var img=$(this)
 
 /*]]>*/</script>
 
-<meta property="fb:app_id" content="928992220481085"/>
+<meta content='928992220481085' property='fb:app_id'/>
 
 </head>
 <!--<body>-->
 <body>
 
-<div id="fb-root"></div><script>window.fbAsyncInit = function() {FB.init({appId : 928992220481085,status : true, // check login statuscookie : true, // enable cookies to allow the server to access the sessionxfbml : true // parse XFBML});};(function() {var e = document.createElement(‘script’);e.src = document.location.protocol + ‘//connect.facebook.net/en_US/all.js';e.async = true;document.getElementById(‘fb-root’).appendChild(e);}());</script>
+<div id='fb-root'/><script>window.fbAsyncInit = function() {FB.init({appId : 928992220481085,status : true, // check login statuscookie : true, // enable cookies to allow the server to access the sessionxfbml : true // parse XFBML});};(function() {var e = document.createElement(&#8216;script&#8217;);e.src = document.location.protocol + &#8216;//connect.facebook.net/en_US/all.js&#39;;e.async = true;document.getElementById(&#8216;fb-root&#8217;).appendChild(e);}());</script>
 
 <b:section class='navigation' id='navigation' maxwidgets='1' showaddelement='no'>
   <b:widget id='HTML77' locked='true' title='Navigation-Menus (Do Not Edit Here!)' type='HTML'>
@@ -1336,13 +1335,7 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/&quot;+cat1+&q
 
 
 
-  <b:if cond='data:blog.pageType == "item"'><div style='padding:20px 0px 5px 0px; margin:0px 0px 0px 0px;'><script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/><div> <fb:comments
-            colorscheme='light'
-            expr:href='data:post.url'
-            expr:title='data:post.title'
-            expr:xid='data:post.id'
-            width='550'
-            /></div></div></b:if>
+  <b:if cond='data:blog.pageType == &quot;item&quot;'><div style='padding:20px 0px 5px 0px; margin:0px 0px 0px 0px;'><script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/><div> <fb:comments colorscheme='light' expr:href='data:post.url' expr:title='data:post.title' expr:xid='data:post.id' width='550'/></div></div></b:if>
 </b:includable>
                         <b:includable id='commentDeleteIcon' var='comment'>
   <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
@@ -1379,7 +1372,7 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/&quot;+cat1+&q
   </b:if>
 </b:includable>
                         <b:includable id='comments' var='post'>
-  <div class='comments' id='comments'>
+  <div class='comments' id='comment-form'>
     <a name='comments'/>
     <b:if cond='data:post.allowComments'>
       <h4>
