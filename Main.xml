@@ -1223,7 +1223,6 @@ $.fn.imgCentering=function(options){return this.each(function(e){var img=$(this)
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
 </div>
       </div>
           <div class='clr'/>
@@ -1954,25 +1953,13 @@ printRelatedLabels(&#39;<data:post.url/>&#39;);</script>
   </b:if>
 </b:includable>
                         <b:includable id='threaded-comment-form' var='post'>
-  <div class='comment-form'>
-    <a name='comment-form'/>
-    <b:if cond='data:mobile'>
-      <p><data:blogCommentMessage/></p>
-      <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
-    <b:else/>
-      <p><data:blogCommentMessage/></p>
-      <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
-    </b:if>
-    <data:post.friendConnectJs/>
-    <data:post.cmtfpIframe/>
-    <script type='text/javascript'>
-      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
-    </script>
-  </div>
+  <b:if cond='data:blog.pageType == "item"'><div style='padding:20px 0px 5px 0px; margin:0px 0px 0px 0px;'><script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/><div> <fb:comments
+            colorscheme='light'
+            expr:href='data:post.url'
+            expr:title='data:post.title'
+            expr:xid='data:post.id'
+            width='550'
+            /></div></div></b:if>
 </b:includable>
                         <b:includable id='threaded_comment_css'>
   <style>
