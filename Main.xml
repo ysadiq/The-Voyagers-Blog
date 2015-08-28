@@ -1134,6 +1134,13 @@ $.fn.imgCentering=function(options){return this.each(function(e){var img=$(this)
 
                 <div class='header-wrapper'>
         <div class='ct-wrapper'>
+                <!-- the-voyagers_Responsive_AdSense -->
+                <script src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
+                <ins class='adsbygoogle' data-ad-client='ca-pub-5998320719408313' data-ad-format='auto' data-ad-slot='5378246987' style='display:block'/>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
                 <b:section class='header' id='header' maxwidgets='1' showaddelement='yes'>
                   <b:widget id='Header1' locked='true' title='The Voyagers (Header)' type='Header'>
                     <b:includable id='main'>
@@ -1213,16 +1220,7 @@ $.fn.imgCentering=function(options){return this.each(function(e){var img=$(this)
 <li><a href='https://twitter.com/_YSaddiq' target="_blank"><i class='fa fa-twitter'/></a></li>
 </ul>
 </div> -->
-<!-- the-voyagers_Responsive_AdSense -->
-<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5998320719408313"
-     data-ad-slot="5378246987"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 </div>
       </div>
           <div class='clr'/>
@@ -1953,13 +1951,7 @@ printRelatedLabels(&#39;<data:post.url/>&#39;);</script>
   </b:if>
 </b:includable>
                         <b:includable id='threaded-comment-form' var='post'>
-  <b:if cond='data:blog.pageType == "item"'><div style='padding:20px 0px 5px 0px; margin:0px 0px 0px 0px;'><script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/><div> <fb:comments
-            colorscheme='light'
-            expr:href='data:post.url'
-            expr:title='data:post.title'
-            expr:xid='data:post.id'
-            width='550'
-            /></div></div></b:if>
+  <b:if cond='data:blog.pageType == &quot;item&quot;'><div style='padding:20px 0px 5px 0px; margin:0px 0px 0px 0px;'><script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/><div> <fb:comments colorscheme='light' expr:href='data:post.url' expr:title='data:post.title' expr:xid='data:post.id' width='550'/></div></div></b:if>
 </b:includable>
                         <b:includable id='threaded_comment_css'>
   <style>
