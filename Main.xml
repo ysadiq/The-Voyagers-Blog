@@ -1097,7 +1097,14 @@ $.fn.imgCentering=function(options){return this.each(function(e){var img=$(this)
 /*]]>*/</script>
 
 <meta content='928992220481085' property='fb:app_id'/>
-
+<!-- Open Graph Meta Tags BEGIN -->
+<meta expr:content='data:blog.pageName' property='og:title'/>
+<meta expr:content='data:blog.title' property='og:site_name'/>
+<meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+<b:if cond='data:blog.metaDescription'>
+  <meta expr:content='data:blog.metaDescription' property='og:description'/>
+</b:if>
+<!-- Open Graph Meta Tags END -->
 </head>
 <!--<body>-->
 <body>
