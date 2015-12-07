@@ -1096,7 +1096,6 @@ $.fn.imgCentering=function(options){return this.each(function(e){var img=$(this)
 
 /*]]>*/</script>
 
-<meta content='928992220481085' property='fb:app_id'/>
 <!-- Open Graph Meta Tags BEGIN -->
 <meta expr:content='data:blog.pageName' property='og:title'/>
 <meta expr:content='data:blog.title' property='og:site_name'/>
@@ -1109,7 +1108,6 @@ $.fn.imgCentering=function(options){return this.each(function(e){var img=$(this)
 <!--<body>-->
 <body>
 
-<div id='fb-root'/><script>window.fbAsyncInit = function() {FB.init({appId : 928992220481085,status : true, // check login statuscookie : true, // enable cookies to allow the server to access the sessionxfbml : true // parse XFBML});};(function() {var e = document.createElement(&#8216;script&#8217;);e.src = document.location.protocol + &#8216;//connect.facebook.net/en_US/all.js&#39;;e.async = true;document.getElementById(&#8216;fb-root&#8217;).appendChild(e);}());</script>
 
 <b:section class='navigation' id='navigation' maxwidgets='1' showaddelement='no'>
   <b:widget id='HTML77' locked='true' title='Navigation-Menus (Do Not Edit Here!)' type='HTML'>
@@ -1350,7 +1348,28 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/&quot;+cat1+&q
 
 
 
-  <b:if cond='data:blog.pageType == &quot;item&quot;'><div style='padding:20px 0px 5px 0px; margin:0px 0px 0px 0px;'><script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/><div> <fb:comments colorscheme='light' expr:href='data:post.url' expr:title='data:post.title' expr:xid='data:post.id' width='550'/></div></div></b:if>
+  <div class='comment-form'>
+    <a name='comment-form'/>
+    <b:if cond='data:mobile'>
+      <h4 id='comment-post-message'>
+        <a expr:id='data:widget.instanceId + &quot;_comment-editor-toggle-link&quot;' href='javascript:void(0)'><data:postCommentMsg/></a></h4>
+      <p><data:blogCommentMessage/></p>
+      <data:blogTeamBlogMessage/>
+      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
+    <b:else/>
+      <h4 id='comment-post-message'><data:postCommentMsg/></h4>
+      <p><data:blogCommentMessage/></p>
+      <data:blogTeamBlogMessage/>
+      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
+    </b:if>
+    <data:post.friendConnectJs/>
+    <data:post.cmtfpIframe/>
+    <script type='text/javascript'>
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
+    </script>
+  </div>
 </b:includable>
                         <b:includable id='commentDeleteIcon' var='comment'>
   <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
@@ -2183,81 +2202,6 @@ printRelatedLabels(&#39;<data:post.url/>&#39;);</script>
 
                    <div class='sidebar-wrapper'>
                      <b:section class='sidebar' id='sidebar' showaddelement='yes'>
-                       <b:widget id='CustomSearch1' locked='false' title='Search This Blog' type='CustomSearch'>
-                         <b:includable id='main'>
-    <!-- only display title if it's non-empty -->
-    <b:if cond='data:title != &quot;&quot;'>
-      <h2 class='title'><data:title/></h2>
-    </b:if>
-
-    <div class='widget-content'>
-      <div expr:id='data:widget.instanceId + &quot;_form&quot;'>
-        <span class='cse-status'><data:loadingMsg/></span>
-      </div>
-    </div>
-
-    <!-- override gsearch.css -->
-    <style type='text/css'>
-      #uds-searchControl .gs-result .gs-title,
-      #uds-searchControl .gs-result .gs-title *,
-      #uds-searchControl .gsc-results .gsc-trailing-more-results,
-      #uds-searchControl .gsc-results .gsc-trailing-more-results * {
-        color:<data:linkColor/>;
-      }
-
-      #uds-searchControl .gs-result .gs-title a:visited,
-      #uds-searchControl .gs-result .gs-title a:visited * {
-        color:<data:visitedLinkColor/>;
-      }
-
-      #uds-searchControl .gs-relativePublishedDate,
-      #uds-searchControl .gs-publishedDate {
-        color: <data:dateColor/>;
-      }
-
-      #uds-searchControl .gs-result a.gs-visibleUrl,
-      #uds-searchControl .gs-result .gs-visibleUrl {
-        color: <data:urlColor/>;
-      }
-
-      #uds-searchControl .gsc-results {
-        border-color: <data:borderColor/>;
-        background-color: <data:backgroundColor/>;
-      }
-
-      #uds-searchControl .gsc-tabhActive {
-        border-color: <data:borderColor/>;
-        border-top-color: <data:activeBorderColor/>;
-        background-color: <data:backgroundColor/>;
-        color: <data:textColor/>;
-      }
-
-      #uds-searchControl .gsc-tabhInactive {
-        border-color: <data:borderColor/>;
-        background-color: transparent;
-        color: <data:linkColor/>;
-      }
-
-      #uds-searchClearResults {
-        border-color: <data:borderColor/>;
-      }
-
-      #uds-searchClearResults:hover {
-        border-color: <data:activeBorderColor/>;
-      }
-
-      #uds-searchControl .gsc-cursor-page {
-        color: <data:linkColor/>;
-      }
-
-      #uds-searchControl .gsc-cursor-current-page {
-        color: <data:textColor/>;
-      }
-    </style>
-
-    <b:include name='quickedit'/>
-  </b:includable>
-                       </b:widget>
                        <b:widget id='PopularPosts100' locked='false' title='Popular Posts' type='PopularPosts'>
                          <b:includable id='main'>
   <b:if cond='data:title'><h2><data:title/></h2></b:if>
@@ -2310,12 +2254,23 @@ printRelatedLabels(&#39;<data:post.url/>&#39;);</script>
   </div>
 </b:includable>
                        </b:widget>
+                       <b:widget id='HTML1' locked='false' title='' type='HTML'>
+                         <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+                       </b:widget>
                        <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
                          <b:includable id='main'>
   <div class='widget-content'>
-    <b:if cond='!data:blog.disableAdSenseWidget'>
-      <data:adCode/>
-    </b:if>
+    <data:adCode/>
     <b:include name='quickedit'/>
   </div>
 </b:includable>
@@ -2427,16 +2382,6 @@ printRelatedLabels(&#39;<data:post.url/>&#39;);</script>
   </a>
 </b:includable>
                        </b:widget>
-                       <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
-                         <b:includable id='main'>
-  <div class='widget-content'>
-    <b:if cond='!data:blog.disableAdSenseWidget'>
-      <data:adCode/>
-    </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-                       </b:widget>
                        <b:widget id='Attribution1' locked='true' title='' type='Attribution'>
                          <b:includable id='main'>
     <b:if cond='data:feedbackSurveyLink'>
@@ -2488,6 +2433,45 @@ head.appendChild(script);
 }})();
 &lt;/script&gt;
 </b:includable>
+                       </b:widget>
+                       <b:widget id='HTML2' locked='false' title='Disqus for The Voyagers Blog' type='HTML'>
+                         <b:includable id='main'>
+            <script type='text/javascript'>
+                var disqus_shortname = &#39;thevoyagers&#39;;
+                var disqus_blogger_current_url = &quot;<data:blog.canonicalUrl/>&quot;;
+                if (!disqus_blogger_current_url.length) {
+                    disqus_blogger_current_url = &quot;<data:blog.url/>&quot;;
+                }
+                var disqus_blogger_homepage_url = &quot;<data:blog.homepageUrl/>&quot;;
+                var disqus_blogger_canonical_homepage_url = &quot;<data:blog.canonicalHomepageUrl/>&quot;;
+            </script>
+            <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                <style type='text/css'>
+                    #comments {display:none;}
+                </style>
+                <script type='text/javascript'>
+                    (function() {
+                        var bloggerjs = document.createElement(&#39;script&#39;);
+                        bloggerjs.type = &#39;text/javascript&#39;;
+                        bloggerjs.async = true;
+                        bloggerjs.src = &#39;//&#39;+disqus_shortname+&#39;.disqus.com/blogger_item.js&#39;;
+                        (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(bloggerjs);
+                    })();
+                </script>
+            </b:if>
+                <style type='text/css'>
+                    .post-comment-link { visibility: hidden; }
+                </style>
+                <script type='text/javascript'>
+                (function() {
+                    var bloggerjs = document.createElement(&#39;script&#39;);
+                    bloggerjs.type = &#39;text/javascript&#39;;
+                    bloggerjs.async = true;
+                    bloggerjs.src = &#39;//&#39;+disqus_shortname+&#39;.disqus.com/blogger_index.js&#39;;
+                    (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(bloggerjs);
+                })();
+                </script>
+        </b:includable>
                        </b:widget>
                      </b:section>
                    </div><!-- /sidebar-wrapper -->
