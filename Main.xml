@@ -1348,7 +1348,7 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/&quot;+cat1+&q
 </b:includable>
                         <b:includable id='comment-form' var='post'>
 
-<b:if cond='data:blog.pageType == &quot;item&quot;'><div style='padding:20px 0px 5px 0px; margin:0px 0px 0px 0px;'><script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/><div> <fb:comments colorscheme='light' expr:href='data:post.url' expr:title='data:post.title' expr:xid='data:post.id' width='550'/></div></div></b:if>
+<b:if cond='data:blog.pageType == &quot;item&quot;'><div style='padding:20px 0px 5px 0px; margin:0px 0px 0px 0px;'><script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/><div> <fb:comments colorscheme='light' expr:href='data:post.url' expr:title='data:post.title' expr:xid='data:post.id' width='708'/></div></div></b:if>
 
 </b:includable>
                         <b:includable id='commentDeleteIcon' var='comment'>
